@@ -14,10 +14,10 @@
   "description": "",
   "dependencies": {
     "cypress": "^14.0.0",
-    "cypress-downloadfile": "^1.2.4",
     "info": "^1.0.0"
   },
   "devDependencies": {
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "cypress-downloadfile": "^1.2.4"
   }
 }
