@@ -1,0 +1,2 @@
+Write file example
+Content written successfully

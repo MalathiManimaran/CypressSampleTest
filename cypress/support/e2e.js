@@ -15,3 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+beforeEach(function(){
+    cy.log("Executing e2e tests on Cypress");
+  
+});

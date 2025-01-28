@@ -1,8 +1,18 @@
 ///<reference types="cypress" />
-it('Google Search', () => {
+it('Fill the form', () => {
   cy.visit('https://testautomationpractice.blogspot.com/');
-  cy.url().should('contain', 'testautomationpractice');  //url contains testautomationpractice
+
+  cy.get('#cookieChoiceDismiss').click(); //click on the cookie dismiss button
   cy.get('.titlewrapper > .title').contains( 'Practice'); //visible text contains Practice in the title
+ 
+  cy.get('.titlewrapper > .title').should('have.text', '\nAutomation Testing Practice\n')
+  .and ('have.class','title')
+  .and('be.visible'); //should have text Automation Testing Practice as the title and class as title and should be visible
+  cy.url().should('contain', 'testautomationpractice');  //url should-contains testautomationpractice
+  
+  cy.get('.titlewrapper > .title').invoke('text').then((title) => {
+    expect(title).to.equal('\nAutomation Testing Practice\n');   //Explicit assertion Expect title should be equal to Automation Testing Practice
+  });
   
   cy.get('#name').type('Cypress Name');
   cy.get('#email').type('Cypress Email');
