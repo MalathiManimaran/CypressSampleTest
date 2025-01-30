@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-30T22:11:40.204Z",
+    "end": "2025-01-30T22:11:47.964Z",
+    "duration": 7760,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fb7ae903-f8cf-40b6-933b-f0d89982e0fa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pomDemo.cy.js",
+      "file": "cypress\\e2e\\pomDemo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f0dc0e6-9dbd-4cf6-b832-cf2a60176cb8",
+          "title": "All Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Invalid credential Test  1",
+              "fullTitle": "All Login Test Invalid credential Test  1",
+              "timedOut": null,
+              "duration": 3184,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Test Case to skip use it.skip / to run only this test case use it.only\nconst uname = \"Admin\";\nconst password = \"admin1234\";\nloginPage.enterName(uname);\nloginPage.enterPassword(password);\nloginPage.clickLogin();\ncy.screenshot(password);\ncy.log(\"Successfully validated the invalid credentials\" + uname + password);",
+              "err": {},
+              "uuid": "d67d3320-6540-4f70-b41c-3b76044759ed",
+              "parentUUID": "6f0dc0e6-9dbd-4cf6-b832-cf2a60176cb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Valid Login Test 2 ",
+              "fullTitle": "All Login Test Valid Login Test 2 ",
+              "timedOut": null,
+              "duration": 2212,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterName('Admin');\nloginPage.enterPassword('admin123');\nloginPage.clickLogin();\ncy.url().should('include', 'dashboard');\ncy.log(\"Successfully validated the login page\");\ncy.screenshot(cy.url().should('include', 'dashboard'));",
+              "err": {},
+              "uuid": "fb2966e7-8a11-40f7-b1aa-cf86526a24b2",
+              "parentUUID": "6f0dc0e6-9dbd-4cf6-b832-cf2a60176cb8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d67d3320-6540-4f70-b41c-3b76044759ed",
+            "fb2966e7-8a11-40f7-b1aa-cf86526a24b2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5396,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
